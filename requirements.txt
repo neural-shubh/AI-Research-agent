@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-core
+langgraph
+langchain-ollama
+sentence-transformers
+faiss-cpu
+duckduckgo-search
+httpx
+beautifulsoup4
+lxml
+python-dotenv
+pydantic
+rich
+tqdm
+fastembed
