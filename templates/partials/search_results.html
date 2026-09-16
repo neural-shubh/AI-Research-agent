@@ -1,0 +1,22 @@
+{% if result.answer %}
+<div class="answer-box">{{ result.answer }}</div>
+<div class="source-list">
+    <strong>Sources:</strong>
+    {% for i, source in enumerate(result.sources, 1) %}
+    <div class="source-item">
+        {{ i }}. <a href="{{ source.url }}" target="_blank">{{ source.title }}</a> 
+        <span style="color: #666; font-size: 12px;">{{ source.source_type }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="source-list">
+    <strong>Search Results:</strong>
+    {% for i, source in enumerate(sources, 1) %}
+    <div class="source-item">
+        {{ i }}. <a href="{{ source.url }}" target="_blank">{{ source.title }}</a><br>
+        <small>{{ source.snippet[:200] }}...</small>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}

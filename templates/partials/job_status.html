@@ -1,0 +1,65 @@
+{% if job.status == "started" %}
+<div class="job-status running">
+    <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="spinner"></div>
+        <div>
+            <strong>Research started:</strong> "{{ job.topic }}"
+            <div style="color: #666; font-size: 13px;">Job ID: {{ job_id }} - This may take a few minutes...</div>
+        </div>
+    </div>
+</div>
+<script>
+    // Poll for status updates
+    setTimeout(() => {
+        htmx.ajax('GET', '/job/{{ job_id }}/status', {target: '#research-status', swap: 'innerHTML'});
+    }, 5000);
+</script>
+
+{% elif job.status == "completed" %}
+<div class="job-status completed">
+    <h4>✅ Research Completed: "{{ job.topic }}"</h4>
+    
+    <div style="margin: 15px 0;">
+        <h5>Report Preview:</h5>
+        <div class="answer-box" style="max-height: 300px; overflow-y: auto;">{{ job.result.report[:1000] }}...</div>
+    </div>
+    
+    <div style="margin: 15px 0;">
+        <h5>Sources ({{ job.result.sources|length }}):</h5>
+        {% for i, src in enumerate(job.result.sources, 1) %}
+        <div class="source-item">
+            {{ i }}. <a href="{{ src.url }}" target="_blank">{{ src.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+    
+    {% if job.result.paper %}
+    <div style="margin: 15px 0;">
+        <h5>📄 Paper Generated:</h5>
+        <p>{{ job.result.paper.sections }} sections, {{ job.result.paper.citations }} citations, {{ job.result.paper.figures }} figures</p>
+        <div class="download-links">
+            <a href="/download/{{ job_id }}/main.pdf" target="_blank">📄 PDF</a>
+            <a href="/download/{{ job_id }}/main.tex" target="_blank">📝 LaTeX</a>
+            <a href="/download/{{ job_id }}/main.md" target="_blank">📋 Markdown</a>
+            <a href="/download/{{ job_id }}/references.bib" target="_blank">📚 BibTeX</a>
+        </div>
+    </div>
+    {% endif %}
+    
+    <div style="margin-top: 15px;">
+        <button hx-get="/api/job/{{ job_id }}" hx-target="#research-status" hx-swap="innerHTML" style="background: #6c757d;">View Full JSON Output</button>
+    </div>
+</div>
+
+{% elif job.status == "failed" %}
+<div class="job-status failed">
+    <h4>❌ Research Failed: "{{ job.topic }}"</h4>
+    <p style="color: #dc3545;">{{ job.error }}</p>
+    <button hx-post="/research" hx-vals='{"topic": "{{ job.topic }}", "iterations": 2}' hx-target="#research-status" hx-swap="innerHTML">Retry</button>
+</div>
+
+{% else %}
+<div class="job-status">
+    <p>Job status unknown.</p>
+</div>
+{% endif %}
