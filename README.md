@@ -9,7 +9,6 @@ Built with **LangGraph + LangChain + Ollama**, with a local-first architecture a
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![LangGraph](https://img.shields.io/badge/LangGraph-Agentic%20Workflow-orange)
 ![Ollama](https://img.shields.io/badge/Ollama-Local%20LLM-black)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
