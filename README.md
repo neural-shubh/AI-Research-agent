@@ -556,13 +556,6 @@ Ideas for new search sources, retrieval improvements and research workflows are 
 
 ---
 
-# 📜 License
-
-MIT License — free for personal and commercial use.
-
----
-
-
 ### 🔬 Built to make research less painful.
 
 **Python · LangGraph · LangChain · Ollama · FastAPI · HTMX · fastembed · PyMuPDF**
