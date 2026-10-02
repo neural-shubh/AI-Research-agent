@@ -12,18 +12,18 @@ Built with **LangGraph + LangChain + Ollama**, with a local-first architecture a
 
 ---
 
-## 🧠 Why I Built This
+## Why I Built This
 
 Writing a research paper isn't just writing the paper.
 
 You have to:
 
-* 🔎 Find relevant papers and sources
-* 📚 Read through large amounts of information
-* 🧩 Break a topic into smaller research questions
-* 🗂️ Keep track of useful information
-* 🔗 Connect evidence across different sources
-* ✍️ Turn everything into a structured report
+* Find relevant papers and sources
+*  Read through large amounts of information
+*  Break a topic into smaller research questions
+*  Keep track of useful information
+*  Connect evidence across different sources
+*  Turn everything into a structured report
 
 So instead of repeatedly doing those steps manually, I built an agent that can **orchestrate the research workflow for me.**
 
@@ -35,23 +35,23 @@ It's:
 
 ---
 
-# ✨ What It Can Do
+# What It Can Do
 
 | Capability                | What it does                                                  |
 | ------------------------- | ------------------------------------------------------------- |
-| 🔎 **Quick Search**       | Search multiple sources and generate cited answers            |
-| 🧠 **Semantic Q&A**       | Ask questions against your accumulated knowledge base         |
-| 📚 **Knowledge Base**     | Persistently store and retrieve research information          |
-| 📄 **Document Ingestion** | Ingest PDF, Markdown, Python, Jupyter Notebook and text files |
-| 🤖 **Deep Research**      | Perform multi-step research using a LangGraph workflow        |
-| 📝 **Paper Generation**   | Generate LaTeX, Markdown and BibTeX research outputs          |
-| 🖼️ **Figure Extraction** | Extract figures from research PDFs                            |
-| 🌐 **Web UI**             | Use the entire system through a browser interface             |
-| 🔒 **Local-First**        | Run the LLM locally through Ollama                            |
+|  **Quick Search**       | Search multiple sources and generate cited answers            |
+|  **Semantic Q&A**       | Ask questions against your accumulated knowledge base         |
+|  **Knowledge Base**     | Persistently store and retrieve research information          |
+|  **Document Ingestion** | Ingest PDF, Markdown, Python, Jupyter Notebook and text files |
+|  **Deep Research**      | Perform multi-step research using a LangGraph workflow        |
+|  **Paper Generation**   | Generate LaTeX, Markdown and BibTeX research outputs          |
+|  **Figure Extraction** | Extract figures from research PDFs                            |
+|  **Web UI**             | Use the entire system through a browser interface             |
+|  **Local-First**        | Run the LLM locally through Ollama                            |
 
 ---
 
-# 🚀 The Research Workflow
+# The Research Workflow
 
 ```text
                          ┌──────────────┐
@@ -103,7 +103,7 @@ The workflow is orchestrated using **LangGraph**, allowing the research process 
 
 ---
 
-# 🌐 Research Sources
+# Research Sources
 
 The agent can work with multiple information sources, including:
 
@@ -117,7 +117,7 @@ This allows research to combine information from different types of sources rath
 
 ---
 
-# 📚 Persistent Knowledge Base
+# Persistent Knowledge Base
 
 Research doesn't have to disappear after one question.
 
@@ -153,7 +153,7 @@ The system retrieves the most relevant chunks based on semantic similarity.
 
 ---
 
-# 📄 Document Ingestion
+# Document Ingestion
 
 You can also bring your own research material into the system.
 
@@ -201,15 +201,15 @@ paper_output_<job_id>/
 
 ### Output includes
 
-* 📑 arXiv-style LaTeX
-* 📝 Markdown version
-* 📚 BibTeX references
-* 🖼️ Extracted figures
-* 🗃️ Paper metadata
+*  arXiv-style LaTeX
+*  Markdown version
+*  BibTeX references
+*  Extracted figures
+*  Paper metadata
 
 ---
 
-# ⚡ Quick Start
+#  Quick Start
 
 ### 1. Clone the repository
 
@@ -262,7 +262,7 @@ ollama pull phi3:3.8b
 
 ---
 
-# 🖥️ Web Interface
+#  Web Interface
 
 Prefer a browser instead of the CLI?
 
@@ -280,16 +280,16 @@ http://127.0.0.1:8000
 
 ### Available sections
 
-**🔎 Quick Search**
+** Quick Search**
 Search the web and generate an answer.
 
-**🧠 Ask KB**
+** Ask KB**
 Query your indexed research knowledge.
 
-**🤖 Deep Research**
+** Deep Research**
 Run multi-step research with progress tracking.
 
-**📥 Ingest**
+** Ingest**
 Add local research documents.
 
 **⚙️ Manage**
@@ -297,7 +297,7 @@ View knowledge-base statistics, clear data and index new topics.
 
 ---
 
-# 💻 CLI Reference
+#  CLI Reference
 
 | Command                         | Purpose                                      |
 | ------------------------------- | -------------------------------------------- |
@@ -312,7 +312,7 @@ View knowledge-base statistics, clear data and index new topics.
 
 ---
 
-# 🏗️ Architecture
+#  Architecture
 
 ```text
                          AI RESEARCH AGENT
@@ -362,7 +362,7 @@ View knowledge-base statistics, clear data and index new topics.
 
 ---
 
-# ⚙️ Configuration
+#  Configuration
 
 The system can be configured through environment variables.
 
@@ -411,7 +411,7 @@ ai-research-agent/
 
 ---
 
-# 🔍 Example
+#  Example
 
 ### Input
 
@@ -455,7 +455,7 @@ References
 
 ---
 
-# 🧩 Design Principles
+#  Design Principles
 
 ### Local-first
 
@@ -479,7 +479,7 @@ The system uses a multi-step graph rather than treating research as a single pro
 
 ---
 
-# 🚧 Current Limitations
+#  Current Limitations
 
 This project is still evolving.
 
@@ -496,7 +496,7 @@ Some areas that can be improved include:
 
 ---
 
-# 🛣️ Possible Future Improvements
+#  Possible Future Improvements
 
 ```text
                     Current
@@ -521,17 +521,17 @@ Some areas that can be improved include:
 
 Potential directions include:
 
-* 🔬 Research-paper discovery
-* 🧠 Improved RAG pipelines
-* 📊 Research comparison tools
-* 🔗 Citation graphs
-* 🧪 Experiment tracking
-* 📑 Automatic literature reviews
-* 🤝 Multi-agent research workflows
+*  Research-paper discovery
+*  Improved RAG pipelines
+*  Research comparison tools
+*  Citation graphs
+*  Experiment tracking
+*  Automatic literature reviews
+*  Multi-agent research workflows
 
 ---
 
-# 📌 Project Status
+#  Project Status
 
 **Active development 🚧**
 
@@ -541,7 +541,7 @@ The architecture is intentionally modular so additional research tools and workf
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 Contributions are welcome.
 
